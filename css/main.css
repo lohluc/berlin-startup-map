@@ -1,0 +1,244 @@
+* {
+    box-sizing:border-box;
+}
+
+*:visited {
+    color: black; 
+    font-weight: 500;
+}
+
+html, 
+body, 
+#map {
+    font-family: 'Raleway', sans-serif;
+    width: 100%; 
+    height: 100%; 
+    z-index: 1; 
+    position: absolute; 
+    margin: 0;
+}
+
+a {
+    text-decoration: none; 
+    color: black;
+    outline: none;
+}
+
+a:hover {
+    color: #e6332a;
+}
+
+button {
+    outline: none;
+}
+    
+strong {
+    font-size: 14px;
+}
+
+p {
+    font-size: 12px; 
+    margin: 5px 0;
+}
+        
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+li { 
+    padding: 20px 0 15px 15px; 
+    color: white;
+    border-top: 1px solid;
+}
+        
+li:hover {
+    background-color: white; 
+    color: black;
+}
+
+li:hover .test {
+    display: block;
+    background-color: black;
+}
+
+/* Navigation Container */
+#search-container {
+    position: absolute;
+    z-index: 3; 
+}
+
+.logo {
+    width: 290px;
+    background: whitesmoke;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#menu {
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+#menu-container {
+    position: fixed;
+    top: 73px;
+    left: 8px;
+}
+
+#search-nav {
+    width: 290px;
+    max-height: 480px;
+    background-color: rgba(0,0,0,0.9);
+    border-bottom-right-radius: 7px;
+    position: fixed;
+    top: 48px;
+    overflow: hidden;
+}
+
+#scroller {
+    max-height: 400px;
+    overflow: scroll;
+}
+
+input[type="search"] {
+      -webkit-appearance: textfield;
+    }
+
+input:focus {
+    outline:none;
+}
+
+#search-input {
+    font-family: 'Raleway', sans-serif;
+    width: 80%;
+    height: 35px;
+    margin: 20px 0 20px 45px;
+    padding: 0 10px 0 10px;
+    padding-left: 10px;
+    font-size: 14px;
+    border-radius: 7px;
+    border: none;
+    background: ghostwhite;
+}
+
+
+/* Reset Zoom Container */
+.zoom-container {
+    z-index: 2;
+    position: absolute;
+}
+
+#zoom,
+#zoom:focus {
+    cursor: pointer;
+    height: 45px;
+    width: 45px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.9);
+    border:none;
+    border-top-left-radius: 10px;  
+}
+
+#zoom:hover {
+   background-color: rgba(0,0,0,1);
+}
+
+/* On Click Info About Location Window */
+.location-image {
+    margin: 2px 0 8px 0;
+}
+
+.location-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    color: black;
+}
+
+.location-address {
+    font-family: 'Raleway', sans-serif;
+    color: black;
+}
+
+.web-link-site {
+    color: black;
+    font-weight: 500;
+    margin: 10px 0 3px 0;
+}
+
+.web-link-direct {
+    margin: 0;
+    font-weight: 500;
+}
+
+.twitter {
+    width: 22px;
+    height: 22px;
+    margin-top: 10px;
+    border-radius: 4px;
+    padding: 2px;
+    background: black;
+}
+
+.facebook,
+.instagram {
+    width: 22px;
+    background: black;
+    margin: 10px 0 0 12px;
+    border-radius: 4px;
+}
+
+.twitter:hover,
+.facebook:hover,
+.instagram:hover {
+    background: #e6332a;
+    transition: 0.6s;
+}
+
+#twitter-widget-0 {
+    position: fixed !important;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    min-width: 0 !important;
+}
+
+#twitter-button {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    cursor: pointer;
+    height: 45px;
+    width: 45px;
+    background-color: rgba(0,0,0,0.9);
+    border:none;
+    border-bottom-left-radius: 10px;  
+}
+
+#twitter-button:hover {
+    background-color: rgba(0,0,0,1);
+}
+
+.tweets-logo {
+    padding: 5px;
+}
+
+/* Responsive CSS */
+@media screen and (max-width: 700px) and (orientation:landscape) {
+    #search-container {
+        display: none;
+    }
+
+    #twitter-widget-0 {
+        display: none;
+    }
+}
