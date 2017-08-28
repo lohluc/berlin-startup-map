@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Startups Berlin</title>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body oncontextmenu="return false">
+
+<!-- Google Map -->  
+    <div id="map"></div>
+
+<!-- Navigation Container -->  
+    <div id="search-container">
+    <img class="logo" src="img/startups-logo.svg" alt="Startups Berlin Logo">
+        <div id="search-nav">
+            <input id="search-input" type="search" placeholder="Search Startup" data-bind="textInput: query, valueUpdate: 'keydown'"></input>
+            <div id="scroller">
+                <ul data-bind="template: {name: 'marker', foreach:markers}"></ul>
+                <script type="text/html" id="marker">
+                    <div data-bind="visible: visible">
+                        <a href="#" data-bind="attr: {id: id}">
+                            <li>
+                                <strong data-bind="text: title"></strong>
+                                <p data-bind="text: streetAddress"></p>
+                                <p data-bind="text: cityAddress"></p>
+                            </li>
+                        </a>
+                    </div>
+                </script>    
+            </div>
+        </div> 
+        <!-- Close/Open Navigation Button  -->  
+        <div id="menu-container">
+            <img id="menu" src="img/exit.svg" alt="Menu Icon">
+        </div>   
+    </div>
+
+<!-- Reset Zoom Button -->  
+    <div class="zoom-container">
+        <button id="zoom"><img src="img/zoom.svg" alt="Zoom Icon"></button>
+    </div>
+
+<!-- Twitter Button & Twitter Timeline --> 
+    <div id="twitter-button">
+    	<img class="tweets-logo" src="img/twitter-white.svg">
+    </div>
+
+    <a class="twitter-timeline" data-chrome="nofooter noheader" data-width="0" data-height="350" href="https://twitter.com/LucLohr/lists/startups-berlin"></a> 
+
+<!-- Scripts --> 
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>  
+    <script>
+        window.twttr = (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+          if (d.getElementById(id)) return t;
+          js = d.createElement(s);
+          js.id = id;
+          js.src = "https://platform.twitter.com/widgets.js";
+          fjs.parentNode.insertBefore(js, fjs);
+          t._e = [];
+          t.ready = function(f) {
+            t._e.push(f);
+          };
+          return t;
+        }(document, "script", "twitter-wjs"));
+    </script>
+    <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/lib/knockout-3.3.0.js"></script>
+    <script async type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
