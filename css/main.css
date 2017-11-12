@@ -201,44 +201,9 @@ input:focus {
     transition: 0.6s;
 }
 
-#twitter-widget-0 {
-    position: fixed !important;
-    right: 0;
-    top: 0;
-    z-index: 1;
-    min-width: 0 !important;
-}
-
-#twitter-button {
-    position: fixed;
-    top: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    z-index: 1;
-    cursor: pointer;
-    height: 45px;
-    width: 45px;
-    background-color: rgba(0,0,0,0.9);
-    border:none;
-    border-bottom-left-radius: 10px;  
-}
-
-#twitter-button:hover {
-    background-color: rgba(0,0,0,1);
-}
-
-.tweets-logo {
-    padding: 5px;
-}
-
 /* Responsive CSS */
 @media screen and (max-width: 700px) and (orientation:landscape) {
     #search-container {
-        display: none;
-    }
-
-    #twitter-widget-0 {
         display: none;
     }
 }
