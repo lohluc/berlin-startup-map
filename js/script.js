@@ -125,10 +125,10 @@ function setAllMap() {
 var markers = [
     {   
     title: "CODE University",
-    lat: 52.498407, 
-    lng: 13.383549,
-    streetAddress: "Tempelhofer Ufer 17",
-    cityAddress: "10963 Berlin",
+    lat: 52.494022, 
+    lng: 13.446336,
+    streetAddress: "Lohmühlenstraße 65",
+    cityAddress: "12435 Berlin",
     countryAddress: "Germany",
     url: "https://code.berlin/en/",
     facebook: "https://www.facebook.com/CodeUniversity",
@@ -378,9 +378,8 @@ $('#search-input').on('input', function(e) {
 });
 
 
-// Hide and show navigation and twitter timeline on click
+// Hide and show navigation on click
 var visible = true;
-var visibleTwitter = true;
 
 function noNav() {
     $("#search-nav").animate({
@@ -417,28 +416,6 @@ function yesNav() {
     visible = true;
 }
 
-function noTwitter() {
-    $("#twitter-widget-0").animate({
-      width: 0,
-     }, 500);
-    $(".tweets-logo").attr("src", "img/twitter-white.svg").css("padding", 5);
-    $("#twitter-button").css("height", 45).css("width", 45).css("right", 0);
-    visibleTwitter = false;
-}
-
-function yesTwitter() {
-    $("#twitter-widget-0").show();
-        $(".tweets-logo").attr("src", "img/back.svg").css("padding", 7);
-        $("#twitter-widget-0").animate({
-        width: 250,
-        }, 500);
-        $("#twitter-button").animate({
-            right: 250,
-        },2000);
-        $("#twitter-button").css("height", 30).css("width", 30);
-    visibleTwitter = true;
-}
-
 function hideNav() {
     if(visible === true) {
         noNav();
@@ -447,41 +424,23 @@ function hideNav() {
     }
 }
 
-function hideTwitter() {
-    if(visibleTwitter === true) {
-        noTwitter();        
-    } else {
-        yesTwitter();  
-    }
-}
-
 $("#menu").click(hideNav);
-$("#twitter-button").click(hideTwitter);
 
-
-// Hide and show Nav and Twitter Timeline on different screen sizes
+// Hide and show Nav on different screen sizes
 $(window).resize(function() {
     var windowWidth = $(window).width();
     if ($(window).width() < 850 && visible === true) {
             noNav();
-            noTwitter();
-            $("#twitter-button").css('display','none');
     	} else if($(window).height() < 595 && visible === true) {
             noNav();
-            noTwitter();
-            $("#twitter-button").css('display','none');
         }
     if ($(window).width() >= 850 && visible === false) {
             if($(window).height() > 595) {
                 yesNav();
-                yesTwitter();
-                $("#twitter-button").css('display','flex');
             }
         } else if($(window).height() >= 595 && visible === false) {
             if($(window).width() > 850) {
                 yesNav();
-                yesTwitter();
-                $("#twitter-button").css('display','flex');
             }     
         }    
 });
