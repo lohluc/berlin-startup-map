@@ -14,4 +14,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Follow up
 
-If you enjoy reading my code, please consider to take a look on [Twitter](https://twitter.com/luclohr) 🙂
+If you enjoy reading my code, please consider to take a look on [Twitter](https://twitter.com/lohluc) 🙂
